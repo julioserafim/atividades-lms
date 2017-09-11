@@ -1,0 +1,43 @@
+#body-index{
+  background-image: url("gradient_bg.png");
+}
+
+.header{
+  border-style: groove dashed solid groove;;
+  border-width: 4px 3px 7px 10px;
+  border-color: black white gray blue;
+}
+
+p{
+  font-family: "Arial",sans-serif;
+  font-size: 14px;
+  color: #8A2BE2;
+  text-align: center;
+}
+
+#article-1{
+  border: 5px solid blue;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 110px;
+  margin-left: 60px;
+  padding: 3cm 10px 20px 40mm;
+}
+
+#article-2{
+  border: 5px solid blue;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 110px;
+  margin-left: 60px;
+  padding: 3cm 10px 20px 40mm;
+}
+
+#article-3{
+  border: 5px solid blue;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 110px;
+  margin-left: 60px;
+  padding: 3cm 10px 20px 40mm;
+}
