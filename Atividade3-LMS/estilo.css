@@ -25,16 +25,16 @@ p{
 }
 
 #article-2{
-  border: 5px solid blue;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  margin-right: 110px;
-  margin-left: 60px;
-  padding: 3cm 10px 20px 40mm;
+  border: 8px dashed red;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 80px;
+  margin-left: 40px;
+  padding: 5cm 10px 20px 45mm;
 }
 
 #article-3{
-  border: 5px solid blue;
+  border: 10px dotted green;
   margin-top: 80px;
   margin-bottom: 80px;
   margin-right: 110px;
