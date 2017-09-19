@@ -15,6 +15,10 @@ p{
   text-align: center;
 }
 
+h5{
+  text-align: center;
+}
+
 #article-1{
   border: 5px solid blue;
   margin-top: 80px;
