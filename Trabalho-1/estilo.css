@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color:gray;
+    font-family: 'Arial';
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.7)
+    
+}
+
+.menu ul{
+    list-style: none;
+    position: relative;
+    max-height:0em;	
+    transition: 1s max-height 0.9s;
+}
+
+.menu li:hover ul {
+	/* à adapter, le minimum est le meilleur mais voyez large 😉 */
+	max-height: 90em;
+}
+
+
+
+.menu ul li{
+    width: 150px;
+    float: left;
+    
+}
+
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    background-color:gray;
+    width: 220px;
+    color: white;
+}
+
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+    max-height: 0px;
+    transition: max-height 800ms;
+    
+}
+
+.menu ul ul a{
+    background-color:#069;
+    
+}
+
+.menu ul li:hover ul{
+    visibility: visible;
+    
+    
+}
+
+
+
+.menu a:hover{
+    background-color: #00b7ea;
+}
+
+.menu ul ul li{
+    float: none;
+}
+
+.nav-lateral{
+    float: left;
+    background-color:gray;
+    width: 15%;
+    height: 700px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.7);
+    margin-top: 2px;
+    
+}
+
+.nav-lateral ul li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-lateral ul li a:hover{
+    background-color:blue;
+}
+
+.nav-lateral ul{
+    list-style: none;
+}
+
+.barra-direita{
+    float: right;
+    background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%);
+    height: 300px;
+    width: 200px;
+    margin-right: 2px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.7)    
+}
+
+
+
+label[for="bt_menu"]{
+    padding: 5px;
+    background-color:gray;
+    font-family: "Arial";
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+#bt_menu{
+    display: none;
+}
+
+label[for="bt_menu"]{
+    display: none;
+}
+
+@media(max-width: 600px){
+    label[for="bt_menu"]{
+        display: block;
+    }
+
+.nav-lateral{
+        visibility: hidden;
+        
+}
+
+
+#bt_menu:checked ~ .menu{
+        margin-left: 0;
+}
+    
+.menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+}
+
+    
+
+.menu ul li{
+        width: 100%;
+        float: none;
+}
+
+.menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 800ms;
+        
+}
+
+.menu ul ul a:hover{
+    max-height: 1000px;
+    
+}
+
+    
+
+.menu ul li:hover ul{
+        height: auto;
+        max-height: 100ṕx;
+        box-shadow: 0px 2px 3px rgba(0,0,0,0.7)    
+        
+    
+}
+
+}
+
+@keyframes passear{
+    0%{
+        transform: rotateX(0deg);
+        background-image: url("as.jpg");
+        transform: translate(300px, 0);
+        
+        
+        
+    }
+    30%{
+        transform: rotateX(180deg);
+        background-image: url("king.png"); 
+        
+       }
+    100%{
+        transform: rotateX(360deg);
+        background-image: url("as.jpg");
+        transform: translate(-150px, 0);
+        
+    }
+}
+
+.outter{    
+    perspective: 400px;
+    overflow: auto;
+
+}
+.inner{
+    width: 200px;
+    height: 200px;
+    animation-name: passear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    float: left;
+    margin: 10px;
+    justify-content: center;
+}
+
