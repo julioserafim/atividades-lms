@@ -11,6 +11,22 @@
     padding: -40px;
 }
 
+
+.menu{
+    margin-top: 10px;
+    width: 100%;
+    font-family: Arial;
+    float: left;
+    background-color: #4caf32;
+    font-size: 14px;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu li{
+    float: left;
+}
+
 #conteudo{
   text-align: center;
   font-family: Arial;
@@ -31,20 +47,7 @@
     letter-spacing: 2px;
 }
 
-.menu{
-    margin-top: 10px;
-    width: 100%;
-    font-family: Arial;
-    float: left;
-    background-color: #4caf32;
-    font-size: 14px;
-}
-.menu ul{
-    list-style-type: none;
-}
-.menu li{
-    float: left;
-}
+
 
 
 
@@ -67,7 +70,7 @@
 
 .menu li>a {
    display: block;
-	 color: #ffffff;
+	 color: #green;
 	 padding-top:16px;
    padding-right: 19px;
    padding-bottom: 14px;

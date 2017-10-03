@@ -2,181 +2,141 @@
     margin: 0;
     padding: 0;
 }
-
-.menu{
-    width: 100%;
-    height: 50px;
-    background-color:gray;
-    font-family: 'Arial';
-    box-shadow: 0px 2px 3px rgba(0,0,0,0.7)
-    
-}
-
-.menu ul{
-    list-style: none;
+.navegador-superior{
     position: relative;
-    max-height:0em;	
-    transition: 1s max-height 0.9s;
-}
-
-.menu li:hover ul {
-	/* à adapter, le minimum est le meilleur mais voyez large 😉 */
-	max-height: 90em;
-}
-
-
-
-.menu ul li{
-    width: 150px;
-    float: left;
-    
-}
-
-.menu a{
-    padding: 15px;
-    display: block;
-    text-decoration: none;
-    background-color:gray;
-    width: 220px;
-    color: white;
-}
-
-.menu ul ul{
-    position: absolute;
-    visibility: hidden;
-    max-height: 0px;
-    transition: max-height 800ms;
-    
-}
-
-.menu ul ul a{
-    background-color:#069;
-    
-}
-
-.menu ul li:hover ul{
-    visibility: visible;
-    
-    
-}
-
-
-
-.menu a:hover{
-    background-color: #00b7ea;
-}
-
-.menu ul ul li{
-    float: none;
-}
-
-.nav-lateral{
-    float: left;
-    background-color:gray;
-    width: 15%;
-    height: 700px;
+    z-index: 2;
     box-shadow: 0px 2px 3px rgba(0,0,0,0.7);
-    margin-top: 2px;
     
 }
 
-.nav-lateral ul li a{
+h1,p{
+    text-align: center;
+}
+
+
+.navegador-superior, .dropdown{
+    background-color:#CEF7F2;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.7);
+    
+}
+.navegador-superior > ul, .dropdown{
+    list-style-type: none;
+}
+.navegador-superior > ul > li{
+    display: inline-block;
+}
+.navegador-superior > ul > li > a, .dropdown > li > a{
     display: block;
-    padding: 15px;
+    padding: 7px;
     text-decoration: none;
-    color: white;
+}
+.navegador-superior > ul > li > a:hover, .dropdown > li > a:hover{
+    background-color: #ddd;
+}
+.dropdown{
+    position: absolute;
+    width: 180px;
+    visibility: visible;
 }
 
-.nav-lateral ul li a:hover{
-    background-color:blue;
+.dropdown > li{
+    max-height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+.navegador-superior > ul > li > a:hover + .dropdown > li{
+    visibility: visible;
+    opacity: 1;
+    max-height: 60px;
 }
 
-.nav-lateral ul{
-    list-style: none;
+.navegador-responsivo{
+    background-color: white;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.7);
+    
+
 }
+.navegador-responsivo > ul > li > a{
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+}
+.navegador-responsivo > ul > li > a:hover{
+    background-color: #ddd;
+}
+
+.conteudo{
+    padding: 0px;
+}
+
 
 .barra-direita{
     float: right;
-    background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%);
-    height: 300px;
+    background: linear-gradient(to bottom, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%);
+    height: 720px;
     width: 200px;
-    margin-right: 2px;
-    box-shadow: 0px 2px 3px rgba(0,0,0,0.7)    
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.7);
+}
+
+.barra-direita > ul > li{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.imagem-direita{
+    margin-left: 40px;
+    margin-top: 200px;
+    width: 120px;
+    height: 120px;
 }
 
 
-
-label[for="bt_menu"]{
-    padding: 5px;
-    background-color:gray;
-    font-family: "Arial";
+.rodape{
+    margin-bottom: 2px;
+    background-color: #E6D8FD;
+    width: 100%;
+    height: 100%;
+    float: left;    
+}
+.rodape p {
+    width: 600px;
+    margin: auto;
+    padding-bottom: 9px;
     text-align: center;
-    font-size: 30px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
 }
 
-#bt_menu{
-    display: none;
-}
 
-label[for="bt_menu"]{
-    display: none;
-}
 
-@media(max-width: 600px){
-    label[for="bt_menu"]{
-        display: block;
+@media screen and (min-width: 600px) {
+    .navegador-responsivo{
+        height: 1000px;
+        width: 20vw;
+        float: left;
+    }
+    .conteudo{
+        margin-left: 20vw;
+        width: 80vw;
     }
 
-.nav-lateral{
-        visibility: hidden;
-        
 }
 
+@media screen and (max-width: 600px){
+    .barra-direita{
+        float: left;
+    }
+    .rodape{
+        float: left;
+    }
 
-#bt_menu:checked ~ .menu{
-        margin-left: 0;
-}
-    
-.menu{
-        margin-top: 5px;
-        margin-left: -100%;
-        transition: all .4s;
-}
 
-    
-
-.menu ul li{
-        width: 100%;
-        float: none;
-}
-
-.menu ul ul{
-        position: static;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 800ms;
-        
-}
-
-.menu ul ul a:hover{
-    max-height: 1000px;
+    .rodape p{
+      text-align: left;
+    }
     
 }
 
-    
 
-.menu ul li:hover ul{
-        height: auto;
-        max-height: 100ṕx;
-        box-shadow: 0px 2px 3px rgba(0,0,0,0.7)    
-        
-    
-}
-
-}
 
 @keyframes passear{
     0%{
@@ -201,7 +161,7 @@ label[for="bt_menu"]{
 }
 
 .outter{    
-    perspective: 400px;
+    perspective: 230px;
     overflow: auto;
 
 }
