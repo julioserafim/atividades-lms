@@ -190,17 +190,16 @@ label[for="bt_menu"]{
 
 <script>
 function openNav() {
+    var width = document.getElementById("main").offsetWidth;
+    if(width  <= 250){
+        location.reload();
+    }
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-    document.getElementById("accordion").style.marginLeft = "250px";
 
 
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-}
 
 var acc = document.getElementsByClassName("accordion");
 var i;
