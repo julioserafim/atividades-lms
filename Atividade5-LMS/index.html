@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    margin-top: 40px;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-left: 300px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    transition: margin-left .5s;
+    margin-left: 140px;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    transition: margin-left .5s;
+}
+
+.paragrafo-accordeon{
+    margin-left: 300px;
+}
+
+
+
+#bt_menu{
+    display: none;
+}
+
+label[for = "bt_menu"]{
+    display: none;
+}
+
+@media(max-width:480px){
+    label[for = "bt_menu"]{
+    display: block;
+    }
+    .sidenav{
+         margin-top: 74px;
+         margin-left: -100%;
+    }
+
+    #bt_menu:checked ~ .sidenav{
+        margin-left: 0px;
+    }
+
+    #main{
+        margin-left: 0px;
+    }
+
+    button.accordion{
+        margin-left: 0px;
+    }
+
+    .paragrafo-accordeon{
+        margin-left: 0px;
+    }
+}
+
+
+label[for="bt_menu"]{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-family: "Arial";
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+
+}
+
+ 
+
+</style>
+</head>
+<body>
+
+<header>
+    Titulo
+</header>
+
+<input type="checkbox" id="bt_menu">
+<label for="bt_menu" onclick="openNav()" >&#9776;</label>
+
+<div id="mySidenav" class="sidenav">
+  <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+  <a href="#">Como meditar</a>
+  <a href="#">Como estudar</a>
+  <a href="#">Como se exercitar</a>
+  <a href="#">Como dormir bem</a>
+</div>
+
+
+
+
+<div id="main">
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p class="paragrafo-accordeon">r incidi ad minliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p class="paragrafo-accordeon">smod temponim venia aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p class="paragrafo-accordeon">incididunt utea commodo consequat.</p>
+</div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("accordion").style.marginLeft = "250px";
+
+
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+
+</body>
+</html> 
