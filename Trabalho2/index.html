@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZapZap</title>
+
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: rgba(37, 255, 4, 0.12);
+        }
+
+
+
+        #container-div {
+            border: 1px solid rgba(154, 154, 154, 0.21);
+            height: 600px;
+            width: 900px;
+            margin: 0 auto;
+            -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+            z-index: 9999;
+        }
+
+        #menu-superior {
+            border: 1px solid rgba(154, 154, 154, 0.21);
+            height: 50px;
+            width: 900px;
+        }
+
+        #menu-esquerdo {
+            float: left;
+            border: 1px solid rgba(154, 154, 154, 0.21);
+            height: 50px;
+            width: 30%;
+            background-color: rgba(154, 154, 154, 0.21);
+        }
+
+        #menu-direito {
+            float: right;
+            border: 1px solid rgba(154, 154, 154, 0.21);
+            height: 50px;
+            width: 626px;
+            background-color: rgba(154, 154, 154, 0.21);
+        }
+
+        #container-conteudo {
+            border: 1px solid rgba(154, 154, 154, 0.21);
+            height: 530px;
+            width: 1150px;
+        }
+
+        .amigos-grupos {
+            float: left;
+            border: 1px solid rgba(154, 154, 154, 0.21);
+            height: 547px;
+            width: 23.60%;
+        }
+
+        #barra-pesquisa {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            background-color: rgba(154, 154, 154, 0.11);
+        }
+
+        #barra-pesquisa:hover {
+            background-color: rgba(176, 171, 171, 0.18);
+        }
+
+        #amigo1:hover {
+            background-color: rgba(176, 171, 171, 0.18);
+            cursor: pointer;
+        }
+
+        #amigo2:hover {
+            background-color: rgba(176, 171, 171, 0.18);
+            cursor: pointer;
+        }
+
+        #amigo3:hover {
+            background-color: rgba(176, 171, 171, 0.18);
+            cursor: pointer;
+        }
+
+
+
+        #conteudo-conversas {
+            float: right;
+            border: 1px solid rgba(154, 154, 154, 0.21);
+            height: 485px;
+            width: 627px;
+            position: relative;
+            right: 250;
+            border: 1px solid blue;
+            margin-right: 247px;
+        }
+
+        #rodape {
+            float: right;
+            right: 250;
+            width: 627px;
+            height: 60px;
+            border: 1px solid rgba(154, 154, 154, 0.21);
+            background-color: rgba(176, 171, 171, 0.18);
+            border: 1px solid blue;
+            margin-right: 247px;
+        }
+
+
+        img:hover {
+            cursor: pointer;
+        }
+
+
+        input[type=text] {
+            padding-left: 5px;
+            font-family: Tahoma;
+            font-size: 15px;
+        }
+
+        #texto-titulo1 {
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color: green;
+        }
+
+        #texto-titulo2 {
+            float: left;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #8383F8;
+            ;
+        }
+
+        #botao-logar {
+            height: 40px;
+            width: 80px;
+            float: right;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 10%;
+            background-color: white;
+            box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.5);
+            margin-right: 80px;
+        }
+
+        .avatar {
+            height: 70px;
+            display: block;
+            border-bottom: 1px solid gray;
+        }
+
+        .avatar span {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .avatar:hover {
+            cursor: pointer;
+        }
+
+        .avatar .foto-perfil {
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            border: 1px solid rgb(238, 238, 238);
+            margin: 5px;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .messages .mensagem-recebida {
+            text-align: left;
+        }
+
+        .messages .mensagem-enviada {
+            text-align: right;
+        }
+
+        .mensagem-recebida span {
+            display: inline-block;
+            padding: 13px;
+            margin: 11px;
+            border-radius: 15px;
+            background-color: #1CDF7D;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .mensagem-enviada span {
+            display: inline-block;
+            padding: 7px;
+            margin: 12px;
+            border-radius: 16x;
+            background-color: #dcf8c6;
+        }
+
+        #nome {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content */
+
+        .modal-content {
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        /* The Close Button */
+
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #form-cadastro-grupo {
+            position: absolute;
+            bottom: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <span id="texto-titulo1"> Zap </span> <span id="texto-titulo2">Zap</span>
+
+        <button id="botao-logar"> Logar </button>
+
+    </header>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <form action="" method="post">
+                <span class="close">&times;</span>
+                <div>
+                    <label for="user-id">Digite nome de usuario:</label>
+                    <br/>
+                </div>
+                <div>
+                    <input name="userId" type="text" placeholder="Digite seu id">
+                    <br/>
+                </div>
+                <div>
+                    <button id="botao-submit-login" onclick="loginlogout()">Login</button>
+                        
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div id="container-div">
+
+
+
+        <div id="menu-superior">
+            <div id="menu-esquerdo">
+                <img src="img/contato.png" width="35" height="35" style="margin-left:10px;margin-top:5px;float:left" />
+                <p>Usuarios</p>
+            </div>
+            <div id="menu-direito">
+                <img src="img/contato.png" width="35" height="35" style="margin-left:10px;margin-top:5px;float:left" />
+                <span id="nome"></span> <br />
+            </div>
+        </div>
+        <div id="container-conteudo">
+            <div class="amigos-grupos">
+                <div id="barra-pesquisa">
+                    <img src="img/lupa.png" width="20" height="20" style="margin-left:10px;margin-top:1px;float:left" />                    &nbsp;&nbsp;
+                    <input type="text" class="GenisText" placeholder="Digite um nome para pesquisar" />
+                </div>
+
+
+                <div id="form-cadastro-grupo">
+                    <h3>Novo Grupo:</h3>
+                    <form action="">
+                        Nome: <input name="groupName" type="text">
+                        <br> Id: <input name="groupID" type="text">
+                        <br>
+                        <button onclick="criarGrupo()">Cadastrar</button>
+
+
+                    </form>
+                </div>
+
+            </div>
+
+
+
+            <div id="conteudo-conversas">
+                <div class="messages">
+                    <div class="mensagem-recebida">
+
+
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+
+            <footer>
+                <div id="rodape">
+                    <input  type="text" name="campoMensagem" placeholder="Digite uma mensagem" />
+                    <button id="botao-msg-enviar" onclick="enviarMensagem()" disabled="">Enviar Mensagem</button>
+                </div>
+            </footer>
+        </div>
+        
+
+    </div>
+
+</body>
+
+<script src="grupos.js"></script>
+<script src="modal.js"></script>
+
+</html>
