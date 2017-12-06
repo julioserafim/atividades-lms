@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Poker Store</title>
+
+    <link href="stylesheets/estilo.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+			<img src="img/poker-store2.jpg" class="imagem-logo2" alt="">
+
+    <div class="container">
+
+			
+
+			<!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Poker Store</a>
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+							<li class="active"><a href="#">GALERIA DE PRODUTOS <span class="sr-only">(current)</span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+							<li class="dropdown" id="cadastrar">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastrar novo Usuário</a>
+
+										<form class="navbar-form dropdown-menu navbar-default" aria-labelledby="dropdownMenu1">
+					            <div class="form-group">
+					              <input type="text" id="campo-usuario" placeholder="Usuário" required class="form-control usuario-cadastro">
+					            </div>
+					            <div class="form-group">
+					              <input type="password" id="campo-senha" placeholder="Senha" class="form-control senha-cadastro" required="true">
+					            </div>
+					            <a href="#" role="button" class="btn btn-success cadastrar">Cadastrar</a>
+					          </form>
+							</li>
+							<li class="dropdown desativo">
+										<a href="#" class="dropdown-toggle compras" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Meus Produtos</a>
+
+										<div class="dropdown-menu navbar-default" aria-labelledby="dropdownMenu1">
+											<div class="container cesta">
+											</div>
+					            <a href="compras.html" class="btn btn-success">Finalizar</a>
+					          </form>
+							</li>
+							<li class="dropdown" id="entrar">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar </a>
+
+										<form class="navbar-form dropdown-menu navbar-default" aria-labelledby="dropdownMenu1">
+					            <div class="form-group">
+					              <input type="text" placeholder="User" class="form-control usuario-login">
+					            </div>
+					            <div class="form-group">
+					              <input type="password" placeholder="Password" class="form-control senha-login">
+					            </div>
+					            <a href="#" role="button" class="btn btn-primary entrar">Entrar</a>
+					          </form>
+							</li>
+							<li class="desativo">
+								<a href="#" class="sair" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sair</a>
+							</li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+			<div class="container">
+				<div class="mensagens">
+
+				</div>
+			</div>
+
+      <!-- Example row of columns -->
+			<div class="row">
+			  <div class="col-sm-6 col-md-4 produtos">
+			    <div class="thumbnail produto">
+						<img src="img/baralho.jpg">
+			      <div class="caption">
+			        <h4>Baralho Texas Holdem</h2>
+			        <h3>$ 34,00</h3
+			      </div>
+						<footer class="desativo">
+							<a class="btn btn-primary adicionar-baralho" href="#" role="button">Adicionar</a>
+							<input type="number" min="1" class="baralho-qtd" alt="quantidade de produtos a ser adicionado" value="1">
+						</footer>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="row">
+			  <div class="col-sm-6 col-md-4 produtos">
+			    <div class="thumbnail produto">
+						<img src="img/dealer.jpg">
+			      <div class="caption">
+			        <h4>Botão Dealer</h2>
+			        <h3>$ 56,00</h3
+			      </div>
+						<footer class="desativo">
+							<a class="btn btn-primary adicionar-dealer" href="#" role="button">Adicionar</a>
+							<input type="number" min="1" class="dealer-qtd" alt="quantidade de produtos a ser adicionado" value="1">
+						</footer>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="row">
+			  <div class="col-sm-6 col-md-4 produtos">
+			    <div class="thumbnail produto">
+						<img src="img/maleta.jpg">
+			      <div class="caption">
+			        <h4>Maleta de Poker</h2>
+			        <h3>$ 145,00</h3
+			      </div>
+						<footer class="desativo">
+							<a class="btn btn-primary adicionar-maleta" href="#" role="button">Adicionar</a>
+							<input type="number" min="1" class="maleta-qtd" alt="quantidade de produtos a ser adicionado" value="1">
+						</footer>
+			    </div>
+			  </div>
+			</div>
+    </div> <!-- /container -->
+
+    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+		<script src="js/inicio.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Loja virtual</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/estilo.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+			<!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" >Poker Store</a>
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+							<li class=""><a href="index.html">Galeria de produtos <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+			<div class="container">
+				<div class="mensagens">
+
+				</div>
+			</div>
+
+      <!-- Example row of columns -->
+			<div class="row">
+			  <div class="col-sm-12 col-md-12">
+
+					<div class="panel panel-primary">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Suas Compras</h3>
+					  </div>
+					  <div class="panel-body">
+							<div class="table-responsive">
+								<table class="table">
+									<!-- nome, quantidade e preço unitário -->
+									<thead>
+							      <tr>
+							        <th>Nome</th>
+							        <th>Quantidade</th>
+							        <th>Preço unitário</th>
+							      </tr>
+							    </thead>
+							    
+						    </table>
+							</div>
+					  </div>
+						<div class="panel-footer">
+							<span class="total"></span>
+							<button type="button" class="btn btn-success finalizar" name="button">Finalizar compra</button>
+						</div>
+					</div>
+
+					<div class="panel panel-success">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Compras feitas</h3>
+					  </div>
+						<div class="table-responsive">
+							<table class="table">
+								<!-- nome, quantidade e preço unitário -->
+								<thead>
+									<tr>
+										<th>Data/Hora</th>
+										<th>Valor Total</th>
+									</tr>
+								</thead>
+								<tbody class="feitas">
+								</tbody>
+							</table>
+						</div>
+					</div>
+			  </div>
+    	</div> <!-- /container -->
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+		<script src="js/inicio.js" charset="utf-8"></script>
+		<script src="js/compras.js" charset="utf-8"></script>
+  </body>
+</html>
